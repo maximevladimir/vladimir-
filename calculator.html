@@ -1,0 +1,59 @@
+<html></html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Calculator</title>
+</head>
+
+<body>
+<form name="calc">
+<table class="calculator" cellspacing="0" cellpadding="1" >
+<tr>
+<td colspan="5"><input id="show" name="show" value="0" size="20" maxlength="20"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.show.value= 0 "></td>
+<td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.show)"></td>
+<td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.show.value)) { calculate(this.form) }"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.show,'3.14159265359')"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.show)"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.show, '7')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.show, '8')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.show, '9')"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.show.value)) { exp(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.show, '/')"></td>
+<tr>
+<td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.show, '4')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.show, '5')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.show, '6')"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.show.value)) { ln(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.show, '*')"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.show, '1')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.show, '2')"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.show, '3')"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.show.value)) { sqrt(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.show, '-')"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.show)"></td>
+<td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.show, '0')"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.show, '&#46;')"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.show.value)) { square(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.show, '+')"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.show, '(')"></td>
+<td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.show,')')"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.show.value)) { cos(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="sin" onclick="if(checkNum(this.form.show.value)) { sin(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="tan" onclick="if(checkNum(this.form.show.value)) { tan(this.form) }"></td>
+</tr>
+</table>
+</form>
+<script src="calculate.js"></script>
+</body>
+
+</html>
